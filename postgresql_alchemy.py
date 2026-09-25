@@ -31,13 +31,13 @@ else:
 with Session(engine) as session:
     session.add_all([
         Sale(
-            product_name="laptop",category="electronics",quantity=1,price_per_unit=120.00,sales_date = date(2026,9,1)
+            product_name="laptop",category="electronics",quantity=1,price_per_unit=120.00,sale_date = date(2026,9,1)
         ),
         Sale(
-            product_name="wireless mouse",category="electronics",quantity=3,price_per_unit=25.00,sales_date = date(2026,9,2)
+            product_name="wireless mouse",category="electronics",quantity=3,price_per_unit=25.00,sale_date = date(2026,9,2)
         ),
         Sale(
-            product_name="desk chair",category="furniture",quantity=2,price_per_unit=150.00,sales_date = date(2026,9,3)
+            product_name="desk chair",category="furniture",quantity=2,price_per_unit=150.00,sale_date = date(2026,9,3)
         ),
         Sale(
             product_name="Coffee Mug",category="Kitchen",quantity=5,price_per_unit=12.00,sale_date=date(2026, 9, 4)
