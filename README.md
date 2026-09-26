@@ -1,3 +1,1 @@
 # ascendion_repo_agentic
-
-GROQ_API_KEY = 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
