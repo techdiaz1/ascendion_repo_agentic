@@ -257,5 +257,5 @@ app.mount(
 def home():
 
     return FileResponse(
-        "static/index.html"
+        "static/index1.html"
     )
