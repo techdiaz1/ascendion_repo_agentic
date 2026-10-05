@@ -8,7 +8,7 @@ https://github.com/andreiramani/pgvector_pgsql_windows/releases
 
 3. Paste the file in C:\Program Files\PostgreSQL\18\lib folder {may require admin login}
 
-4. From the zip file, open share > extension > copy vector.control file and vector--0.8.6.sql file
+4. From the zip file, open share folder > extension folder > copy vector.control file and vector--0.8.6.sql file
 
 5. Paste the vector.control and vector--0.8.6.sql files in C:\Program Files\PostgreSQL\18\share\extension folder    {may require admin login}
 
