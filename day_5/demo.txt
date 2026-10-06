@@ -1,0 +1,533 @@
+Beneath the glow of screens at night,
+
+Where lines of code become the light,
+
+A silent world begins to wake,
+
+With every choice and path we make.
+
+From humble scripts in rooms unknown,
+
+To cloud-born systems widely grown,
+
+From tiny apps on handheld screens,
+
+To models built on massive machines.
+
+A keyboard clicks, the cursor blinks,
+
+A developer pauses, plans, and thinks.
+
+One function starts, one module grows,
+
+A system forms from what one knows.
+
+A variable holds a little state,
+
+A loop repeats, an algorithm waits.
+
+A conditional chooses which way,
+
+A program learns what it should say.
+
+The terminal opens, black and wide,
+
+With errors waiting deep inside.
+
+A command is typed, a process starts,
+
+A thousand hidden systems take their parts.
+
+The compiler reads each written line,
+
+And checks the logic, checks the design.
+
+A missing bracket, a typo small,
+
+Can bring the mighty program's fall.
+
+The error flashes, red and bright,
+
+A developer prepares to fight.
+
+Not with a sword, not with a flame,
+
+But logs and tests that know the game.
+
+A breakpoint pauses time itself,
+
+The debugger becomes a trusted help.
+
+Through stack traces long and functions deep,
+
+They hunt the bug that would not sleep.
+
+A database waits beneath the code,
+
+Protecting rows of data it holds.
+
+A query travels through tables wide,
+
+With indexes helping it decide.
+
+A SELECT asks, a JOIN connects,
+
+A transaction guards against defects.
+
+A primary key defines a name,
+
+A foreign key links the data's frame.
+
+The query runs, the records flow,
+
+The application begins to know.
+
+But systems grow, and traffic climbs,
+
+Thousands of users arrive at times.
+
+The server strains beneath the load,
+
+Requests accelerate along the road.
+
+A load balancer stands between,
+
+Distributing traffic, calm and clean.
+
+One server fails, another takes,
+
+The system bends but never breaks.
+
+Containers rise in ordered rows,
+
+Each carrying the code it knows.
+
+A service starts, a service dies,
+
+Orchestration keeps the system alive.
+
+The cloud expands beyond the sky,
+
+With virtual machines and storage high.
+
+Networks connect from zone to zone,
+
+Turning distant servers into one.
+
+An API becomes the door,
+
+Through which one system speaks to more.
+
+A request arrives with method, route,
+
+Authentication checks what it's about.
+
+A token proves the user's name,
+
+Authorization defines their claim.
+
+A response travels back again,
+
+Through layers hidden from the brain.
+
+Behind the scenes, the queues awake,
+
+With messages waiting in their wake.
+
+One service writes, another reads,
+
+Events move through invisible threads.
+
+A cache stores the things most sought,
+
+So repeated work need not be bought.
+
+Milliseconds matter, latency grows,
+
+Performance reveals what nobody knows.
+
+Metrics rise across the screen,
+
+Dashboards show what might have been.
+
+Logs record each request and trace,
+
+Tracing follows every place.
+
+A failure hidden deep below,
+
+Can now be found by what we know.
+
+Then comes the world of artificial minds,
+
+Built from data, patterns, and designs.
+
+A prompt arrives, a model reads,
+
+And searches through its learned seeds.
+
+Tokens enter one by one,
+
+Attention follows where they run.
+
+A transformer begins its task,
+
+Finding patterns users ask.
+
+Words become vectors, numbers, space,
+
+Meaning mapped in a mathematical place.
+
+Embeddings turn language into form,
+
+Where similar ideas gather warm.
+
+A vector database stores the trace,
+
+And searches meaning through the space.
+
+A question comes, the system seeks,
+
+Relevant knowledge from stored peaks.
+
+Chunks are found, the context grows,
+
+The model reads what retrieval shows.
+
+Then generation begins to flow,
+
+A sentence forms from what it knows.
+
+But intelligence alone is not enough,
+
+Reliable systems must be tough.
+
+The agent thinks, selects a tool,
+
+Follows rules that govern what to do.
+
+One tool searches, one tool reads,
+
+Another executes the user's needs.
+
+A database tool retrieves a row,
+
+A web tool finds what users know.
+
+A calculator solves a given task,
+
+A file tool opens what users ask.
+
+The agent chooses, calls, receives,
+
+Then reasons through the data it perceives.
+
+But tools must never run unchecked,
+
+Security stands with code protected.
+
+Arguments first are validated tight,
+
+Bad input stopped before execution's flight.
+
+Authorization checks the user's role,
+
+Before a tool is allowed its goal.
+
+Timeouts guard against endless calls,
+
+Retries recover when failure falls.
+
+But retries stop after limits are met,
+
+So broken systems don't cause a threat.
+
+Every tool call leaves a trace,
+
+Recorded safely with time and place.
+
+The audit table quietly knows,
+
+Which tool was called and how it goes.
+
+Success or failure, every event,
+
+Becomes a record of intent.
+
+And when the system starts to fail,
+
+Observability becomes the trail.
+
+A metric spikes, an alert is raised,
+
+Engineers gather, systems are traced.
+
+The incident room begins to glow,
+
+As teams investigate what they know.
+
+One finds the service, one finds the flaw,
+
+Another checks the database log.
+
+A patch is written, tests are run,
+
+A deployment starts when checks are done.
+
+The pipeline builds, the pipeline tests,
+
+Only trusted code survives the gates.
+
+Continuous integration keeps watch,
+
+Continuous delivery moves the patch.
+
+The change is merged, the system grows,
+
+And nobody stops the work that flows.
+
+Yet technology is not just code,
+
+Or servers carrying a heavy load.
+
+It is the thought behind the screen,
+
+The human reason in between.
+
+A student writes their first "Hello",
+
+Not knowing where the journey'll go.
+
+A beginner breaks their first design,
+
+Then learns to read the error line.
+
+A developer builds through doubt,
+
+Turns an unfinished thought throughout.
+
+A team collaborates across the world,
+
+While branches merge and pull requests unfurl.
+
+Git remembers every change,
+
+Every commit across the range.
+
+A branch is born, experiments start,
+
+A pull request becomes the meeting of art.
+
+Reviewers question, improve, refine,
+
+Until the code is judged to shine.
+
+Then production opens like a door,
+
+And software reaches millions more.
+
+From mobile phones to satellites,
+
+From banking systems through sleepless nights,
+
+From recommendation engines bright,
+
+To robots moving through the night.
+
+From Python scripts and Java's frame,
+
+To Rust and Go that join the game.
+
+From SQL tables holding state,
+
+To distributed systems operating at scale.
+
+From neural nets that learn and grow,
+
+To autonomous agents that reason and know.
+
+From simple loops to massive AI,
+
+Technology keeps reaching high.
+
+But every breakthrough brings a cost,
+
+Every shortcut may leave something lost.
+
+Privacy matters, data has weight,
+
+Security cannot simply wait.
+
+A password stolen, a token leaked,
+
+Can turn a trusted system weak.
+
+Encryption guards the hidden stream,
+
+Authentication protects the dream.
+
+Least privilege becomes the rule,
+
+For every service, every tool.
+
+No system should assume it's safe,
+
+Trust must be earned at every gate.
+
+And still the future moves ahead,
+
+With newer paths where minds are led.
+
+AI agents work side by side,
+
+With humans steering, checking, guiding.
+
+Machines may write, machines may learn,
+
+But human judgment still must turn.
+
+For code can run without a soul,
+
+And systems optimize without a goal.
+
+The hardest problem is not the code,
+
+But knowing where the code should go.
+
+A thousand servers, a million lines,
+
+Are useless without sound designs.
+
+Architecture is more than boxes drawn,
+
+It is deciding what lives beyond.
+
+A monolith, a service, a queue,
+
+A choice depends on what you need to do.
+
+Simple systems should remain that way,
+
+Complexity has a price to pay.
+
+For every layer that we create,
+
+Adds another thing to understand and maintain.
+
+So engineers balance speed and scale,
+
+Reliability when systems fail.
+
+They measure cost, performance, risk,
+
+Before they choose a technical twist.
+
+And when the final system runs,
+
+After countless bugs and countless ones,
+
+A quiet screen may show the truth:
+
+A working product, born from proof.
+
+No roaring crowd, no stadium light,
+
+Yet thousands depend on it each night.
+
+Somewhere a payment goes through,
+
+Somewhere a doctor sees something new.
+
+Somewhere a student learns online,
+
+Somewhere two strangers cross a line.
+
+Somewhere an engineer deploys,
+
+Somewhere a child opens a toy.
+
+Technology moves without applause,
+
+Yet changes lives because of cause.
+
+The screen may seem so small and still,
+
+But behind it stands enormous will.
+
+Servers, networks, code, and data,
+
+Models, algorithms, systems, beta.
+
+All connected in a hidden thread,
+
+By ideas living in a human head.
+
+And when tomorrow's systems rise,
+
+Beyond today's familiar skies,
+
+New tools will come, new models learn,
+
+New architectures take their turn.
+
+But one thing will remain the same—
+
+A human mind begins the game.
+
+A question asked, a problem seen,
+
+A thought transformed into a machine.
+
+From one small line of code begun,
+
+A world of possibilities can run.
+
+So here's to builders, late at night,
+
+Who chase a bug beneath the light.
+
+To architects who draw the plan,
+
+To engineers who understand.
+
+To testers finding what went wrong,
+
+To developers who keep moving on.
+
+To data scientists seeking the sign,
+
+To researchers crossing every line.
+
+To those who build, deploy, repair,
+
+And keep the digital world in care.
+
+The code may change, the tools may fade,
+
+The frameworks shift, the languages trade.
+
+But curiosity will still remain,
+
+The force that drives the technical brain.
+
+For technology is not just machines,
+
+Or endless code in digital streams.
+
+It is imagination given form,
+
+A way to build beyond the norm.
+
+A bridge between an idea and reality,
+
+A language spoken through creativity.
+
+And somewhere now, beneath a screen,
+
+A blinking cursor waits unseen.
+
+A developer types one line anew—
+
+And asks the oldest question:
+
+**"What can we build?"**
