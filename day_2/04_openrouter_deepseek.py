@@ -16,5 +16,3 @@ with OpenRouter(api_key=os.getenv("OPENROUTER_API_KEy")) as client:
     print(json.dumps(response.model_dump(),indent=2,ensure_ascii=False)) #pretty print as a JSON object 
     print("=======================================================================")
     print(response.choices[0].message.content) # LLM response
-
-# ascendion deepseek api key :  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
