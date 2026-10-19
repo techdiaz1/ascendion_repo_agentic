@@ -1,7 +1,5 @@
 #MCP client 
 # MCP server --> Tools --> # API (inside tools)
-
-
 import os
 import asyncio
 import certifi
@@ -22,37 +20,43 @@ client = MultiServerMCPClient(
     {
         "tavily" : {
             "transport" : "streamable_http",
-            "url" : f"https://mcp.tavily.com/mcp/?tavilyApiKey=os.getenv{TAVILY_API_KEY}"
+            "url" : f"https://mcp.tavily.com/mcp/?tavilyApiKey={TAVILY_API_KEY}"
         }
     }
 )
+
 async def get_all_tools():
     tools = await client.get_tools()
-    print("\nAvailable MCP Tools: \n")
+    print("Available MCP Tools : \n")
     for tool in tools:
         print(tool.name)
 
-# This retuns tavily_search tool object 
+# this returns the tavily_search tool object 
+
 
 tavily_search_tool = None
-async def get_tavily_search_tool(): 
+async def get_tavily_search_tool():
     global tavily_search_tool
     if tavily_search_tool is not None:
-        return
-    
-    tools = await client.get_tools()
-    print("\nAvailable MCP Tools: ")
-    for tool in tools:
+        return 
+    tools = await client.get_tools() 
+    print("Available MCP Tools : \n")
+    for tool in tools:               
         print(tool.name)
     tavily_search_tool = next(tool for tool in tools if tool.name == "tavily_search")
+# the built-in next() function is used to manually retrieve the next item from a generator object or any iterator
 
-# This function can be used to call the tavily_search tool with a query in backend.py
-async def tavily_mcp_search(query: str):
+# function to call the tavily_search_tool with a query 
+async def tavily_mcp_search(query:str):
     await get_tavily_search_tool()
-    result = await tavily_search_tool.ainvoke(    #ainvoke on the tool object tavily_search_tool  
+    result = await tavily_search_tool.ainvoke(   # async invoke on the tool object tavily_search_tool)
         {
-            "query" : query
+            "query":query
         }
     )
-    print(result)  #does the realtime search operation, and it returns the result 
-    # we used the mcp server to fetch the search tool from tavily and return a response 
+    print(result)
+
+if __name__ == "__main__":                        
+#    asyncio.run(get_all_tools()) #list all tools
+   query = "latest news in ai"
+   asyncio.run(tavily_mcp_search(query))
