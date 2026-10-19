@@ -1,33 +1,36 @@
+#MCP client 
+# MCP server --> Tools --> # API (inside tools)
+
+
 import os
 import asyncio
 import certifi
 from dotenv import load_dotenv
 from langchain_mcp_adapters.client import MultiServerMCPClient
+# configure Python to use a trusted CA certificate bundle when making HTTPS connections from your MCP client.
 os.environ["SSL_CERT_FILE"] = certifi.where()
 os.environ["REQUESTS_CA_BUNDLE"] = certifi.where()
-load_dotenv()
+# SSL_CERT_FILE	Tells TLS/SSL libraries that honor this variable where to find the CA certificate bundle.
+# REQUESTS_CA_BUNDLE	Tells the Python requests library which CA bundle to use to verify HTTPS server certificates.
+# certifi.where() returns the filesystem path to the CA certificate bundle provided by the certifi Python package.
+# These help Python verify the identity of remote servers and establish secure TLS connections.
+
+load_dotenv() 
 
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 client = MultiServerMCPClient(
     {
-        "tavily": {
-              "transport": "streamable_http",
-              "url": f"https://mcp.tavily.com/mcp/?tavilyApiKey={TAVILY_API_KEY}"
-        },
+        "tavily" : {
+            "transport" : "streamable_http",
+            "url" : f"https://mcp.tavily.com/mcp/?tavilyApiKey=os.getenv{TAVILY_API_KEY}"
+        }
     }
 )
-
-#MCP client 
-# MCP server
-# Tools 
-# API (inside tools)
-
 async def get_all_tools():
     tools = await client.get_tools()
     print("\nAvailable MCP Tools: \n")
     for tool in tools:
         print(tool.name)
-
 
 # This retuns tavily_search tool object 
 
@@ -41,11 +44,7 @@ async def get_tavily_search_tool():
     print("\nAvailable MCP Tools: ")
     for tool in tools:
         print(tool.name)
-    tavily_search_tool = next(
-                            tool
-                            for tool in tools
-                            if tool.name == "tavily_search"
-        )
+    tavily_search_tool = next(tool for tool in tools if tool.name == "tavily_search")
 
 # This function can be used to call the tavily_search tool with a query in backend.py
 async def tavily_mcp_search(query: str):
