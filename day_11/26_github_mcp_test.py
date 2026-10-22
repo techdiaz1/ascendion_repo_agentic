@@ -6,7 +6,7 @@ from langchain_openrouter import ChatOpenRouter
 from langchain.agents import create_agent
 from langchain_mcp_adapters.client import MultiServerMCPClient
 
-async def main():
+async def main(user_query : str):
     # 1. Configure the LLM
     llm = ChatOpenRouter(
         model="deepseek/deepseek-v4.1-flash",
@@ -47,17 +47,19 @@ async def main():
         {
             "messages":[
                 {
-                    "role":"user",
-                    "content": (
-                        # "List the most recently created repositories "
-                        # " and explain what it contains in brief"
-                        "Fetch me the code for day 11 26_github_mcp_test.py from the ascendion repo agentic"
-                    )
+                    "role":"user","content": user_query
                 }
+                        # sample user queries :"List the most recently created repositories and explain what it contains in brief"
+                        # "Fetch me the code for day 11 26_github_mcp_test.py from the ascendion repo agentic"
             ]
         }
     )
     result["messages"][-1].pretty_print()
 
 if __name__ == "__main__":
-    asyncio.run(main())
+
+    user_query = input("Enter your Github question : ")
+    if user_query:
+        asyncio.run(main(user_query))
+    else:
+        print("No question asked")
