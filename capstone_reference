@@ -1,0 +1,81 @@
+Problem Statement :  
+
+Brand Guardian: Automated End-to-End Azure Multimodal Compliance Orchestration Engine using LangGraph and LangSmith
+Background & Industry Context
+Digital advertising across platforms like YouTube relies heavily on short video commercials and influencer endorsements
+. Advertisers and content creators are legally obligated to strictly comply with regulatory frameworks—such as FTC Disclosure Guidelines regarding sponsored endorsements
+ and YouTube Ad Specifications
+Currently, compliance auditing of video ads is performed manually
+. Human auditors must watch every advertisement, read on-screen fine print, listen to spoken audio claims, compare them line-by-line against legal handbooks, and flag violations
+. This process is expensive, time-consuming, and difficult to scale
+To solve this, organizations require an automated, production-grade LLMOps Multimodal Compliance Engine
+ that ingests raw video content, extracts spoken audio and visual text, performs vector-based legal policy retrieval, evaluates compliance using an LLM agent, and produces structured audit verdicts
+
+
+Capstone Problem Statement
+"Design, build, and deploy an end-to-end, production-grade multimodal compliance auditing pipeline on Microsoft Azure
+. Given a YouTube video ad URL
+, the system must automatically ingest the video, extract both spoken transcripts and on-screen visual claims (OCR)
+, retrieve relevant legal and platform compliance rules from a vector knowledge base
+, orchestrate a stateful agentic audit using LangGraph and GPT-4o
+, and generate a structured audit report (Pass/Fail verdict with categorized severity issues)
+, backed by full application monitoring and agent tracing
+System Architecture & Key Technical Requirements
+Participants must implement the project across five core layers
+:
+[YouTube URL] ──► [FastAPI Backend] ──► [yt-dlp Downloader] ──► [Azure Blob Storage]
+                                                                     │
+                                                                     ▼
+[Pass/Fail Verdict & Report] ◄── [LangGraph Agent] ◄── [Azure AI Video Indexer]
+          │                             │                 (Transcript & OCR)
+          ▼                             ▼
+[LangSmith & App Insights]    [Azure AI Search RAG]
+ (Observability & Tracing)    (FTC & YouTube PDFs)
+
+  
+1. Entry Point & Backend Services
+FastAPI Server (server.py): Expose a REST API with a POST /audit endpoint accepting video URLs and a GET /health status check
+.
+Pydantic Validation: Enforce strict request and response schemas (AuditRequest, ComplianceIssue, AuditResponse)
+.
+2. Multimodal Video Processing Pipeline
+Video Ingestion: Script using yt-dlp to download YouTube video streams locally into temporary MP4 files
+.
+Unstructured Holding: Temporarily host raw video files in Azure Blob Storage
+.
+Multimodal Extraction: Integration with Azure AI Video Indexer using computer vision and speech processing to automatically extract Spoken Transcript: Full speech-to-text dialogue
+.
+Visual On-Screen Text (OCR): Brand claims, fine print, text disclaimers, and logos visible on video frames
+.
+Video Metadata: Technical properties such as video duration and platform specs
+
+
+3. Regulatory Vector Knowledge Base (RAG)
+Document Chunking & Vectorization (index_documents.py): Chunk regulatory PDF handbooks (e.g., FTC Guidelines and YouTube Ad Specs)
+ using RecursiveCharacterTextSplitter (chunk size: 1000, overlap: 200)
+.
+Vector Store: Upload document vectors into Azure AI Search using text-embedding-3-small embeddings
+.
+Hybrid Search Retrieval: Execute hybrid vector and keyword search queries against Azure AI Search to retrieve the top-3 most relevant legal rulebook sections matching the video's transcript and OCR content
+
+  
+4. Stateful Agentic Orchestration (LangGraph)
+Graph State (state.py): Define VideoAuditState using TypedDict and Annotated lists with operator.add to pass context and accumulate detected compliance issues across nodes
+.
+Indexer Node (IndexerNode): Manages downloading, video indexing polling loops, and structured output parsing
+.
+Compliance Auditor Node (ComplianceAuditorNode): Integrates Azure OpenAI (GPT-4o)
+, formats system context with retrieved legal rules
+, evaluates claims against guidelines, cleans markdown formatting using regex
+, and outputs a strict JSON payload
+.
+5. Observability, Telemetry & Tracing
+Azure Application Insights (telemetry.py): Configure OpenTelemetry instrumentation to track API latency, HTTP calls, database/search requests, and generate visual Application Maps
+.
+LangSmith: Enable tracing for the agentic graph execution to monitor prompt payloads, token usage, LLM thought chains, and node execution times
+
+
+
+
+
+COURSE REFERENCE LINK STEP BY STEP (Free available) : https://www.youtube.com/watch?v=I3CWFDgqvq8
